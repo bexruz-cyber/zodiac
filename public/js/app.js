@@ -21,10 +21,16 @@ footerThemeBtn.addEventListener("click", function () {
   footerDropDown.classList.toggle("h-11");
   footerDropDown.classList.toggle("h-[70px]");
   footerDropDownText.classList.toggle("opacity-0");
+  document.documentElement.classList.toggle('dark'); // Dark mode'ni yoqish yoki o'chirish
 });
+
+const toggleDarkMode = () => {
+  document.documentElement.classList.toggle('dark');
+};
 
 // Faqat matnni almashtirish va dropdownni yopish
 footerDropDownText.addEventListener("click", function () {
+  toggleDarkMode()
   if (footerDropDownTitle.textContent.trim() === "Темная тема") {
     footerDropDownTitle.textContent = "Светлая тема";
     footerDropDownText.textContent = "Темная тема.";
@@ -37,3 +43,4 @@ footerDropDownText.addEventListener("click", function () {
   footerDropDown.classList.remove("h-[70px]");
   footerDropDownText.classList.add("opacity-0");
 });
+
