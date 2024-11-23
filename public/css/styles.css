@@ -508,6 +508,12 @@ video {
 .left-0 {
   left: 0px;
 }
+.top-0 {
+  top: 0px;
+}
+.-z-10 {
+  z-index: -10;
+}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -563,6 +569,9 @@ video {
 .h-11 {
   height: 2.75rem;
 }
+.h-6 {
+  height: 1.5rem;
+}
 .h-\[29px\] {
   height: 29px;
 }
@@ -592,6 +601,9 @@ video {
 }
 .max-h-\[47px\] {
   max-height: 47px;
+}
+.w-6 {
+  width: 1.5rem;
 }
 .w-full {
   width: 100%;
@@ -719,6 +731,10 @@ video {
 .bg-\[\#FFFFFF99\] {
   background-color: #FFFFFF99;
 }
+.bg-\[\#FFFFFF\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
+}
 .bg-\[\#ffffffbb\] {
   background-color: #ffffffbb;
 }
@@ -786,8 +802,8 @@ video {
 .pl-10 {
   padding-left: 2.5rem;
 }
-.pl-8 {
-  padding-left: 2rem;
+.pl-\[38px\] {
+  padding-left: 38px;
 }
 .pr-5 {
   padding-right: 1.25rem;
@@ -821,12 +837,6 @@ video {
 }
 .pt-\[60px\] {
   padding-top: 60px;
-}
-.pl-6 {
-  padding-left: 1.5rem;
-}
-.pl-\[38px\] {
-  padding-left: 38px;
 }
 .text-left {
   text-align: left;
@@ -935,9 +945,6 @@ video {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
 }
-.text-\[\] {
-  color: ;
-}
 .opacity-0 {
   opacity: 0;
 }
@@ -977,6 +984,10 @@ body {
   border-color: transparent;
 }
 
+.hover\:border-\[\]:hover {
+  border-color: ;
+}
+
 .hover\:bg-\[\#050505\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(5 5 5 / var(--tw-bg-opacity, 1));
@@ -984,6 +995,15 @@ body {
 
 .hover\:bg-transparent:hover {
   background-color: transparent;
+}
+
+.hover\:bg-\[\]:hover {
+  background-color: ;
+}
+
+.hover\:bg-\[\#FFFFFF\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:font-semibold:hover {
@@ -1003,6 +1023,10 @@ body {
 .hover\:text-\[\#FFFFFF\]:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
+}
+
+.hover\:text-\[\]:hover {
+  color: ;
 }
 
 .hover\:opacity-50:hover {
@@ -1025,6 +1049,10 @@ body {
 
   .max-lg\:mb-\[60px\] {
     margin-bottom: 60px;
+  }
+
+  .max-lg\:hidden {
+    display: none;
   }
 
   .max-lg\:max-w-\[98px\] {
@@ -1132,40 +1160,28 @@ body {
     display: none;
   }
 
-  .max-md\:h-6 {
-    height: 1.5rem;
+  .max-md\:h-3 {
+    height: 0.75rem;
   }
 
-  .max-md\:h-\[38px\] {
-    height: 38px;
+  .max-md\:h-6 {
+    height: 1.5rem;
   }
 
   .max-md\:h-\[43px\] {
     height: 43px;
   }
 
-  .max-md\:h-auto {
-    height: auto;
-  }
-
-  .max-md\:w-\[38px\] {
-    width: 38px;
-  }
-
   .max-md\:w-3 {
     width: 0.75rem;
-  }
-
-  .max-md\:max-w-\[83px\] {
-    max-width: 83px;
   }
 
   .max-md\:max-w-\[72px\] {
     max-width: 72px;
   }
 
-  .max-md\:max-w-\[113px\] {
-    max-width: 113px;
+  .max-md\:max-w-\[83px\] {
+    max-width: 83px;
   }
 
   .max-md\:translate-y-0 {
@@ -1181,20 +1197,16 @@ body {
     align-items: flex-start;
   }
 
+  .max-md\:gap-1\.5 {
+    gap: 0.375rem;
+  }
+
   .max-md\:gap-3 {
     gap: 0.75rem;
   }
 
   .max-md\:gap-6 {
     gap: 1.5rem;
-  }
-
-  .max-md\:gap-1\.5 {
-    gap: 0.375rem;
-  }
-
-  .max-md\:rounded-xl {
-    border-radius: 0.75rem;
   }
 
   .max-md\:rounded-md {
@@ -1205,9 +1217,19 @@ body {
     padding: 1rem;
   }
 
+  .max-md\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
   .max-md\:py-2\.5 {
     padding-top: 0.625rem;
     padding-bottom: 0.625rem;
+  }
+
+  .max-md\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
   }
 
   .max-md\:py-7 {
@@ -1220,26 +1242,6 @@ body {
     padding-bottom: 188px;
   }
 
-  .max-md\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
-  .max-md\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  .max-md\:px-\[17px\] {
-    padding-left: 17px;
-    padding-right: 17px;
-  }
-
-  .max-md\:py-0 {
-    padding-top: 0px;
-    padding-bottom: 0px;
-  }
-
   .max-md\:pb-\[60px\] {
     padding-bottom: 60px;
   }
@@ -1250,10 +1252,6 @@ body {
 
   .max-md\:pl-\[25px\] {
     padding-left: 25px;
-  }
-
-  .max-md\:pr-\[17px\] {
-    padding-right: 17px;
   }
 
   .max-md\:text-\[10px\] {
@@ -1279,11 +1277,6 @@ body {
     line-height: 1rem;
   }
 
-  .max-md\:text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-
   .max-md\:leading-6 {
     line-height: 1.5rem;
   }
@@ -1302,18 +1295,6 @@ body {
 
   .max-md\:leading-\[38px\] {
     line-height: 38px;
-  }
-
-  .max-md\:leading-\[\] {
-    line-height: ;
-  }
-
-  .max-md\:hover\:h-auto:hover {
-    height: auto;
-  }
-
-  .max-md\:hover\:h-\[241px\]:hover {
-    height: 241px;
   }
 
   .max-md\:hover\:h-\[233px\]:hover {
