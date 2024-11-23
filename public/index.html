@@ -8,9 +8,58 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.js"></script>
     <title>Home</title>
+    <style>
+        .monthText {
+            opacity: 0;
+        }
+
+        #textBox {
+            width: 40px;
+        }
+
+        #formMonthBtn:hover #textBox {
+            width: auto;
+        }
+
+     
+
+        #formMonthBtn:hover .monthText {
+            opacity: 1;
+        }
+
+        body{
+            background-image: url(./img/home/bg1.svg);
+            background-size: cover;
+            background-position: center;
+        }
+        @media(max-width:1024px){
+            body{
+            background-image: url(./img/home/bg2.svg);
+            }
+        }
+        @media(max-width:768px){
+            body{
+            background-image: url(./img/home/bg3.svg);
+            }
+        }
+        @media(min-width: 768px) {
+            #textBox {
+                width: 89px;
+            }
+
+            #formMonthBtn:hover #textBox {
+                width: auto;
+            }
+        }
+
+    </style>
 </head>
 
 <body class="overflow-x-hidden">
+    <!-- <img src="./img/home/bg1.svg" alt="lines" class="absolute -z-10 top-0 left-0 max-lg:hidden">
+    <img src="./img/home/bg2.svg" alt="lines" class="absolute -z-10 top-0 left-0 max-md:hidden">
+    <img src="./img/home/bg3.svg" alt="lines" class="absolute -z-10 top-0 left-0 md:hidden"> -->
+    <!-- header start -->
     <header class="py-7 max-lg:pt-[33px] max-lg:pb-[31px] max-md:py-7 bg-[#FFFFFF99]">
         <div class="max-w-[1240px] flex items-center justify-between mx-auto px-5">
             <a href="#" class="flex max-lg:max-w-[98px] max-md:max-w-[83px]  max-w-[102px]">
@@ -42,6 +91,7 @@
             </button>
         </div>
     </header>
+    <!-- hamburger menu start -->
     <div id="hamburgerMenu"
         class="md:hidden transition-all duration-300 bg-[#ffffffbb] px-5 py-7 absolute to-20 -left-full w-full h-full">
         <ul class="flex flex-col gap-5">
@@ -64,9 +114,29 @@
                 class="bg-[#050505] hover:bg-transparent hover:border-[#050505] border hover:text-[#050505] border-transparent transition-all duration-300 max-lg:text-xs rounded-lg py-3 px-4 font-semibold text-base text-[#FFFFFF] leading-[23px]">Подписаться</button>
         </ul>
     </div>
-
-    <section class="pb-[21px] pt-[42px] lg:pt-[60px] lg:pb-[30px]">
-        <div class="max-w-[1070px] p-5 text-center mx-auto">
+    <!-- hero start -->
+    <div class="pb-[30px] pt-[60px] max-lg:pb-[21px] px-5">
+        <div
+            class="max-w-[1200px] mx-auto px-10 py-[148px] max-lg:py-[127px] max-md:py-[188px] bg-[#EEEEEE] rounded-3xl flex flex-col items-center">
+            <h1
+                class="font-bold text-[#1A1A1A] max-lg:text-[60px] text-center max-lg:mb-4 max-md:leading-[38px] max-lg:leading-[72px] max-md:text-[32px] max-md:mb-3 text-[76px] leading-[91px] mb-6">
+                Название сайта</h1>
+            <p
+                class="font-medium text-[28px] text-[#050505] max-lg:text-2xl max-md:leading-[19px] max-lg:mb-[23px] max-lg:leading-[29px] max-w-[551px] text-center leading-[34px] mb-[60px]">
+                Краткое описание возможностей сайта <br class="max-md:hidden"> в 2 строки</p>
+            <div class="flex items-center gap-6 max-lg:gap-4 max-md:flex-col max-md:gap-3">
+                <button
+                    class="py-3 px-4 font-semibold text-2xl max-lg:text-lg max-md:text-sm transition-all leading-[29px] max-lg:leading-[22px] max-md:leading-[17px] duration-300 bg-[#050505] hover:bg-transparent border-[2px] border-transparent rounded-xl text-[#FFFFFF] hover:text-[#050505] hover:border-[#050505]">Рассчитать
+                    совместимость</button>
+                <button
+                    class="py-3 px-4 font-semibold text-2xl max-lg:text-lg max-md:text-sm transition-all leading-[29px] max-lg:leading-[22px] max-md:leading-[17px] duration-300 hover:bg-[#050505] bg-transparent border-[2px] hover:border-transparent rounded-xl hover:text-[#FFFFFF] text-[#050505] border-[#050505]">Узнать
+                    свой прогноз</button>
+            </div>
+        </div>
+    </div>
+    <!-- Cards section start -->
+    <section class="pb-[21px] pt-[21px] lg:pt-[30px] lg:pb-[30px]">
+        <div class="max-w-[1124px] px-5 text-center mx-auto">
             <h1
                 class="text-[#050505] md:text-5xl md:leading-[57px] md:mb-4 mb-3 text-[28px] leading-8 font-bold lg:text-[60px] lg:leading-[72px] lg:mb-6">
                 Прогноз на сегодня</h1>
@@ -380,7 +450,78 @@
             </div>
         </div>
     </section>
-
+    <!-- user age start -->
+    <div class="pt-[21px] lg:pt-[30px] pb-[120px] max-md:pb-[60px]">
+        <div class="max-w-[762px] mx-auto px-5 flex flex-col items-center gap-[42px] max-lg:gap-9 max-md:gap-6">
+            <h2
+                class="font-bold text-5xl text-[#050505] leading-[58px] max-lg:leading-[43px] max-lg:text-4xl max-md:text-xl max-md:leading-6">
+                Введите вашу дату рождения</h2>
+            <form class="flex flex-col items-center gap-[42px] max-lg:gap-9 max-md:gap-6 w-full">
+                <div class="inline-flex items-start gap-6 max-md:gap-1.5">
+                    <div
+                        class="max-w-[123px] max-md:rounded-md max-md:max-w-[72px] inline-flex max-md:py-3 max-md:px-0 w-full items-center justify-center py-4 px-6 border-[2px] border-[#050505] rounded-xl">
+                        <input type="number" required placeholder="Число"
+                            class="w-full outline-none font-medium max-md:text-xs text-2xl max-md:pl-[17px] text-[#99999999] leading-[29px] custom-cursor">
+                    </div>
+                    <button type="button" id="formMonthBtn"
+                        class="py-4 pr-5 flex max-md:rounded-md gap-3 max-md:gap-1.5 h-[61px] max-md:py-3 transition-all max-md:h-[43px] max-md:hover:h-[233px] duration-300 hover:h-[415px] overflow-hidden items-start pl-[38px] border-[2px] border-[#050505] rounded-xl">
+                        <div id="textBox" class="flex flex-col items-start">
+                            <h3
+                                class="hover:text-[#050505] monthTitle max-md:text-xs max-md:leading-[14px] font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Месяц
+                            </h3>
+                            <p
+                                class="hover:text-[#050505] monthText max-md:text-xs transition-all duration-300 text-left font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Январь</p>
+                            <p
+                                class="hover:text-[#050505] monthText max-md:text-xs transition-all duration-300 text-left font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Февраль</p>
+                            <p
+                                class="hover:text-[#050505] monthText max-md:text-xs transition-all duration-300 text-left font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Март</p>
+                            <p
+                                class="hover:text-[#050505] monthText max-md:text-xs transition-all duration-300 text-left font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Апрель</p>
+                            <p
+                                class="hover:text-[#050505] monthText max-md:text-xs transition-all duration-300 text-left font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Май</p>
+                            <p
+                                class="hover:text-[#050505] monthText max-md:text-xs transition-all duration-300 text-left font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Июнь</p>
+                            <p
+                                class="hover:text-[#050505] monthText max-md:text-xs transition-all duration-300 text-left font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Июль</p>
+                            <p
+                                class="hover:text-[#050505] monthText max-md:text-xs transition-all duration-300 text-left font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Август</p>
+                            <p
+                                class="hover:text-[#050505] monthText max-md:text-xs transition-all duration-300 text-left font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Сентябрь</p>
+                            <p
+                                class="hover:text-[#050505] monthText max-md:text-xs transition-all duration-300 text-left font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Октябрь</p>
+                            <p
+                                class="hover:text-[#050505] monthText max-md:text-xs transition-all duration-300 text-left font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Ноябрь</p>
+                            <p
+                                class="hover:text-[#050505] monthText max-md:text-xs transition-all duration-300 text-left font-medium text-2xl text-[#99999999] leading-[29px]">
+                                Декабрь</p>
+                        </div>
+                        <img src="./img/footer/arrow.svg" alt="arrow" class="max-md:w-3">
+                    </button>
+                    <div
+                        class="max-w-[123px] max-md:rounded-md max-md:max-w-[72px] inline-flex max-md:py-3 max-md:px-0 w-full items-center justify-center py-4 pl-10 pr-6  border-[2px] border-[#050505] rounded-xl">
+                        <input type="number" required placeholder="Год"
+                            class="w-full outline-none font-medium max-md:text-xs text-2xl max-md:pl-[25px]  text-[#99999999] leading-[29px] custom-cursor">
+                    </div>
+                </div>
+                <button type="submit"
+                    class="bg-[#050505] max-lg:text-lg max-lg:leading-[22px] max-lg:p-[18px] max-md:p-4 max-md:text-sm max-md:leading-[17px]  rounded-xl font-semibold text-2xl text-[#FFFFFF] leading-[29px] p-6">Узнать
+                    свой прогноз</button>
+            </form>
+        </div>
+    </div>
+    <!-- footer start -->
     <footer class="pt-[60px] pb-[78px] border-t border-[#0505053D] bg-[#FFFFFF99]">
         <div class="max-w-[1240px] px-5 mx-auto">
             <div

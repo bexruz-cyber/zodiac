@@ -44,3 +44,11 @@ footerDropDownText.addEventListener("click", function () {
   footerDropDownText.classList.add("opacity-0");
 });
 
+let monthTitle = document.querySelector(".monthTitle");
+let monthTexts = document.querySelectorAll(".monthText");
+
+monthTexts.forEach((monthText) => {
+  monthText.addEventListener("click", function () {
+    monthTitle.textContent = monthText.textContent.trim();
+  });
+});
