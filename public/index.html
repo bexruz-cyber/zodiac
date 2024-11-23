@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Home</title>
+</head>
+<body class="overflow-x-hidden ">
+    <header class="py-7 max-lg:pt-[33px] max-lg:pb-[31px] max-md:py-7 bg-[#FFFFFF99]">
+        <div class="max-w-[1240px] flex items-center justify-between mx-auto px-5">
+            <a href="#" class="flex max-lg:max-w-[98px] max-md:max-w-[83px]  max-w-[102px]">
+                <img src="./img/./header/headerLogo.svg" alt="web site logo" class="w-full h-[29px] max-md:h-6 object-cover">
+            </a>
+            <ul class="max-md:hidden flex items-center gap-[42px]"> 
+                <li><a href="#" class="font-normal max-lg::text-xs text-sm text-[#050505] transition-all duration-300 hover:font-semibold">Главная</a></li>
+                <li><a href="#" class="font-normal max-lg::text-xs text-sm text-[#050505] transition-all duration-300 hover:font-semibold">Прогнозы</a></li>
+                <li><a href="#" class="font-normal max-lg::text-xs text-sm text-[#050505] transition-all duration-300 hover:font-semibold">Совместимость</a></li>
+                <li><a href="#" class="font-normal max-lg::text-xs text-sm text-[#050505] transition-all duration-300 hover:font-semibold">Нумерология</a></li>
+                <li><a href="#" class="font-normal max-lg::text-xs text-sm text-[#050505] transition-all duration-300 hover:font-semibold">Блог</a></li>
+            </ul>
+            <button class="max-md:hidden bg-[#050505] max-lg:text-xs rounded-lg py-3 px-4 font-semibold text-base text-[#FFFFFF] leading-[23px]">Подписаться</button>
+            <button id="hamburgerBtn" class="max-w-6 flex transition-all duration-300 hover:opacity-50">
+                <img id="hamburger" src="./img/header/hamburgerMenu.svg" class="w-full" alt="hamburger button">
+                <img id="close" src="./img/header/close.svg" class="w-full hidden" alt="hamburger button">
+            </button>
+        </div>
+    </header>
+    <div id="hamburgerMenu" class="md:hidden transition-all duration-300 bg-[#FFFFFF99] px-5 py-7 absolute to-20 -left-full w-full h-full">
+        <ul class="flex flex-col gap-5"> 
+            <li><a href="#" class="flex-1 font-normal max-lg::text-xs text-sm text-[#050505] transition-all duration-300 hover:font-semibold">Главная</a></li>
+            <li><a href="#" class="flex-1 font-normal max-lg::text-xs text-sm text-[#050505] transition-all duration-300 hover:font-semibold">Прогнозы</a></li>
+            <li><a href="#" class="flex-1 font-normal max-lg::text-xs text-sm text-[#050505] transition-all duration-300 hover:font-semibold">Совместимость</a></li>
+            <li><a href="#" class="flex-1 font-normal max-lg::text-xs text-sm text-[#050505] transition-all duration-300 hover:font-semibold">Нумерология</a></li>
+            <li><a href="#" class="flex-1 font-normal max-lg::text-xs text-sm text-[#050505] transition-all duration-300 hover:font-semibold">Блог</a></li>
+            <button class="bg-[#050505] hover:bg-transparent hover:border-[#050505] border hover:text-[#050505] border-transparent transition-all duration-300 max-lg:text-xs rounded-lg py-3 px-4 font-semibold text-base text-[#FFFFFF] leading-[23px]">Подписаться</button>
+        </ul>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
