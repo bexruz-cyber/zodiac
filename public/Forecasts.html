@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.2/dist/tailwind.min.js"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- header start -->
+    <header class="py-7 max-lg:pt-[33px] max-lg:pb-[31px] max-md:py-7 bg-[#FFFFFF99]">
+        <div class="max-w-[1240px] flex items-center justify-between mx-auto px-5">
+            <a href="#" class="flex max-lg:max-w-[98px] max-md:max-w-[83px]  max-w-[102px]">
+                <img src="./img/./header/headerLogo.svg" alt="web site logo"
+                    class="w-full h-[29px] max-md:h-6 object-cover">
+            </a>
+            <ul class="max-md:hidden flex items-center gap-[42px]">
+                <li><a href="./index.html"
+                        class="font-normal max-lg:text-xs text-sm text-[#050505] transition-all duration-300">Главная</a>
+                </li>
+                <li><a href="./Forecasts.html"
+                        class="max-lg:text-xs text-sm text-[#050505] transition-all duration-300 font-semibold">Прогнозы</a>
+                </li>
+                <li><a href="#"
+                        class="font-normal max-lg:text-xs text-sm text-[#050505] transition-all duration-300">Совместимость</a>
+                </li>
+                <li><a href="#"
+                        class="font-normal max-lg:text-xs text-sm text-[#050505] transition-all duration-300">Нумерология</a>
+                </li>
+                <li><a href="#"
+                        class="font-normal max-lg:text-xs text-sm text-[#050505] transition-all duration-300">Блог</a>
+                </li>
+            </ul>
+            <button
+                class="max-md:hidden bg-[#050505] max-lg:text-xs rounded-lg py-3 px-4 font-semibold text-base text-[#FFFFFF] leading-[23px]">Подписаться</button>
+            <button id="hamburgerBtn" class="md:hidden max-w-6 flex transition-all duration-300 hover:opacity-50">
+                <img id="hamburger" src="./img/header/hamburgerMenu.svg" class="w-full" alt="hamburger button">
+                <img id="close" src="./img/header/close.svg" class="w-full hidden" alt="hamburger button">
+            </button>
+        </div>
+    </header>
+    <!-- forecasts info -->
+    <section class="">
+        <div class="">
+            <div class="">
+                <img src="./img/forecasts/areas.svg" alt="Овен">
+                <h1>Овен</h1>
+            </div>
+            <div class=""></div>
+            <div class="">
+                <button></button>
+                <button></button>
+            </div>
+        </div>
+    </section>
+    <!-- footer start -->
+    <footer class="pt-[60px] pb-[78px] border-t border-[#0505053D] bg-[#FFFFFF]">
+        <div class="max-w-[1240px] px-5 mx-auto">
+            <div
+                class="mb-[42px] max-md:mb-9 max-lg:mb-5 flex md:items-center max-[350px]:justify-between max-[350px]:gap-2.5 md:justify-between max-md:items-start ">
+                <a href="#" class="flex max-lg:max-w-[98px]  max-md:max-w-[83px] max-w-[102px]">
+                    <img src="./img/./header/headerLogo.svg" alt="web site logo" class="w-full object-cover">
+                </a>
+                <ul
+                    class="max-lg:-translate-y-full  max-md:translate-y-0 max-[350px]:mr-0 max-[350px]:ml-0 max-md:gap-3 max-md:items-start max-md:flex-col max-md:ml-auto max-md:mr-[26px] flex items-center gap-[42px]">
+                    <li><a href="./index.html"
+                            class="font-normal max-lg:text-xs max-md:leading-[14px] text-sm text-[#050505] transition-all duration-300">Главная</a>
+                    </li>
+                    <li><a href="#"
+                            class="max-lg:text-xs max-md:leading-[14px] text-sm text-[#050505] transition-all duration-300 font-semibold">Прогнозы</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-normal max-lg:text-xs max-md:leading-[14px] text-sm text-[#050505] transition-all duration-300">Совместимость</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-normal max-lg:text-xs max-md:leading-[14px] text-sm text-[#050505] transition-all duration-300">Нумерология</a>
+                    </li>
+                    <li><a href="#"
+                            class="font-normal max-lg:text-xs max-md:leading-[14px] text-sm text-[#050505] transition-all duration-300">Блог</a>
+                    </li>
+                </ul>
+                <button
+                    class="bg-[#050505] max-md:py-2.5 max-md:text-[10px] max-lg:text-xs rounded-lg py-3 px-4 font-semibold text-base text-[#FFFFFF] leading-[23px]">Подписаться</button>
+            </div>
+            <div id="footerDropDown"
+                class="flex justify-center mb-[120px] h-11 transition-all duration-300  overflow-hidden max-lg:mb-[60px] max-md:mb-[42px]">
+                <div class="px-4 py-3 border border-[#0505053D] rounded-lg">
+                    <button id="footerThemeBtn" class="flex items-center gap-2.5">
+                        <p id="footerDropDownTitle" class="font-semibold text-xs text-[#121212]">Темная тема</p>
+                        <img src="./img/footer/arrow.svg" alt="arrow">
+                    </button>
+                    <p
+                        class="cursor-pointer footerDropDownText text-left font-semibold text-xs opacity-0 text-[#99999999] transition-all duration-300 hover:text-[#121212]">
+                        Светлая тема.</p>
+                </div>
+            </div>
+            <p class="font-normal text-[13.5px] leading-[19px] text-[#050505] text-center">© 2024. Права защищены</p>
+        </div>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
