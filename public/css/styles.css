@@ -741,6 +741,15 @@ video {
 .bg-transparent {
   background-color: transparent;
 }
+.bg-\[\#ffffffd7\] {
+  background-color: #ffffffd7;
+}
+.bg-\[\#ffffffef\] {
+  background-color: #ffffffef;
+}
+.bg-\[\#ffffffda\] {
+  background-color: #ffffffda;
+}
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
