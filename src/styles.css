@@ -2,13 +2,240 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Onest:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Onest:wght@100..900&display=swap");
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .custom-cursor {
   cursor: url(../public/img/form/custom-cursor.svg), auto;
 }
 
+.inputRadio {
+  display: none;
+}
+
+.forecastsTab {
+  display: flex;
+  height: 55px;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 33.6px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+  max-width: 150px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  color: #99999999;
+  transition: color 0.3s ease;
+}
+
+.glitter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #050505;
+  max-width: 150px;
+  width: 100%;
+  height: 55px;
+  border-radius: 12px;
+  transition: transform 0.3s ease-out;
+}
+
+/* Yorliq tekshirish uchun */
+#tab1:checked ~ label[for="tab1"],
+#tab2:checked ~ label[for="tab2"],
+#tab3:checked ~ label[for="tab3"],
+#tab4:checked ~ label[for="tab4"],
+#tab5:checked ~ label[for="tab5"],
+#tab6:checked ~ label[for="tab6"],
+#tab7:checked ~ label[for="tab7"],
+#tab8:checked ~ label[for="tab8"],
+#tab9:checked ~ label[for="tab9"],
+#tab10:checked ~ label[for="tab10"],
+#tab11:checked ~ label[for="tab11"],
+#tab12:checked ~ label[for="tab12"] {
+  color: #FFFFFF;
+}
+
+
+/* Harakatlanuvchi Glitter uchun */
+#tab1:checked ~ .glitter {
+  transform: translateX(0);
+}
+
+#tab2:checked ~ .glitter {
+  transform: translateX(150px);
+}
+
+#tab3:checked ~ .glitter {
+  transform: translateX(300px);
+}
+
+#tab4:checked ~ .glitter {
+  transform: translateX(450px);
+}
+#tab5:checked ~ .glitter {
+  transform: translateX(0);
+}
+
+#tab6:checked ~ .glitter {
+  transform: translateX(150px);
+}
+
+#tab7:checked ~ .glitter {
+  transform: translateX(300px);
+}
+
+#tab8:checked ~ .glitter {
+  transform: translateX(450px);
+}
+#tab9:checked ~ .glitter {
+  transform: translateX(0);
+}
+
+#tab10:checked ~ .glitter {
+  transform: translateX(150px);
+}
+
+#tab11:checked ~ .glitter {
+  transform: translateX(300px);
+}
+
+#tab12:checked ~ .glitter {
+  transform: translateX(450px);
+}
+.swiper-button-disabled{
+  opacity: 50%;
+}
+
+@media(max-width:1024px){
+  .forecastsTab {
+    padding: 0 24px;
+    height: 53px;
+    font-size: 24px;
+    line-height: 29px;
+    border-radius: 8px;
+  }
+  
+  .glitter {
+    width: 150px;
+    width: 100%;
+    height: 53px;
+    border-radius: 8px;
+  }
+  
+  /* Harakatlanuvchi Glitter uchun */
+  #tab1:checked ~ .glitter {
+    transform: translateX(0);
+  }
+  
+  #tab2:checked ~ .glitter {
+    transform: translateX(150px);
+  }
+  
+  #tab3:checked ~ .glitter {
+    transform: translateX(300px);
+  }
+  
+  #tab4:checked ~ .glitter {
+    transform: translateX(450px);
+  }
+  #tab5:checked ~ .glitter {
+    transform: translateX(0);
+  }
+  
+  #tab6:checked ~ .glitter {
+    transform: translateX(150px);
+  }
+  
+  #tab7:checked ~ .glitter {
+    transform: translateX(300px);
+  }
+  
+  #tab8:checked ~ .glitter {
+    transform: translateX(450px);
+  }
+  #tab9:checked ~ .glitter {
+    transform: translateX(0);
+  }
+  
+  #tab10:checked ~ .glitter {
+    transform: translateX(150px);
+  }
+  
+  #tab11:checked ~ .glitter {
+    transform: translateX(300px);
+  }
+  
+  #tab12:checked ~ .glitter {
+    transform: translateX(450px);
+  }
+}
+@media(max-width:768px){
+  .forecastsTab {
+    max-width: 98px;
+    height: 37px;
+    font-size: 12px;
+    line-height: 17px;
+    border-radius: 8px;
+  }
+  
+  .glitter {
+    max-width: 98px;
+    width: 100%;
+    height: 37px;
+    border-radius: 8px;
+  }
+  
+  /* Harakatlanuvchi Glitter uchun */
+  #tab1:checked ~ .glitter {
+    transform: translateX(0);
+  }
+  
+  #tab2:checked ~ .glitter {
+    transform: translateX(98px);
+  }
+  
+  #tab3:checked ~ .glitter {
+    transform: translateX(196px);
+  }
+  
+  #tab4:checked ~ .glitter {
+    transform: translateX(294px);
+  }
+  #tab5:checked ~ .glitter {
+    transform: translateX(0);
+  }
+  
+  #tab6:checked ~ .glitter {
+    transform: translateX(98px);
+  }
+  
+  #tab7:checked ~ .glitter {
+    transform: translateX(196px);
+  }
+  
+  #tab8:checked ~ .glitter {
+    transform: translateX(294px);
+  }
+  #tab9:checked ~ .glitter {
+    transform: translateX(0);
+  }
+  
+  #tab10:checked ~ .glitter {
+    transform: translateX(98px);
+  }
+  
+  #tab11:checked ~ .glitter {
+    transform: translateX(196px);
+  }
+  
+  #tab12:checked ~ .glitter {
+    transform: translateX(294px);
+  }
+}
